@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+  <body>
+    <h2>Create Course</h2>
+    <form method="POST">
+      {% csrf_token %}
+      <input type="text" name="title" placeholder="Course title:" required />
+      <input type="number" name="price" placeholder="Price" required />
+      <button type="submit">Add Course</button>
+    </form>
+  </body>
+</html>
