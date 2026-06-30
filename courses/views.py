@@ -16,9 +16,10 @@ course_db = {
 }
 
 def home(request):
-    user_agent = request.headers.get('User-Agent')
-    print(user_agent)
-    return HttpResponse("Welcome to Django course platform!")
+    # user_agent = request.headers.get('User-Agent')
+    # print(user_agent)
+    # return HttpResponse("Welcome to Django course platform!")
+    return render(request, 'courses/home.html')
 
 def course_detail(request, id):
     course_name = course_db.get(id, "Course not Found")
